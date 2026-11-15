@@ -35,4 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  if (currentPage === 'reels.html') {
+    const reelsSection = document.querySelector('.page-section');
+    if (reelsSection) {
+      const shortEmbed = 'https://www.youtube.com/embed/Jdyt9KCVfzw';
+      reelsSection.innerHTML = `<div class="container"><div class="reels-heading text-center"><span class="section-tag">WATCH & LEARN</span><h2>Quick ICT lessons in Shorts.</h2><p>Watch practical ICT tips, revision ideas, and simple explanations. These are demo cards — replace each video link later.</p></div><div class="shorts-grid">${Array.from({ length: 5 }, (_, index) => `<article class="short-card"><div class="short-frame"><iframe width="946" height="626" src="${shortEmbed}" title="#olict #education #ictforlife #ictwithshakilakoralage" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="short-meta"><span><i class="bi bi-youtube"></i> ICT WITH SHAKILA</span><h3>Quick O/L ICT learning tip</h3><p>Demo YouTube Short ${index + 1}</p></div></article>`).join('')}</div><p class="reels-note"><i class="bi bi-info-circle"></i> Replace the five demo embed links in <code>assets/footer.js</code> whenever you publish new Shorts.</p></div>`;
+    }
+  }
+
 });
