@@ -1,0 +1,33 @@
+Program Package_bill (input,Output);
+Var data_usage,Bill :Real; 
+    Package_type :Integer;
+Begin
+
+
+Writeln('Enter Data usage');
+Readln (data_usage);
+Writeln('enter package type');
+readln(Package_type);
+
+If data_usage<0 then
+Writeln ('Invalid Usage')
+else
+Begin
+     If Package_type = 1 then
+      Begin
+       If data_usage <= 100 then
+         Bill:=1000
+       Else 
+         Bill := 1000+ (data_usage-100)*15;
+      end  
+     Else 
+      Begin
+       If data_usage <=200 then
+       Bill:=2000
+       Else
+       Bill := 2000+(data_usage-200)*10;
+      end;
+       
+       Writeln ('Bill = ', bill:0:3);
+end       
+End.
